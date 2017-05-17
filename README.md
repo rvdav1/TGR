@@ -14,6 +14,6 @@ Just download and run the JAR in the target folder.
 
 Eclipse and Maven were used in the development process.
 
-## Licensz
+## License
 
 GNU GENERAL PUBLIC LICENSE Version 3
