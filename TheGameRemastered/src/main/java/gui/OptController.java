@@ -90,6 +90,7 @@ public class OptController implements Initializable {
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/AddProfile.css").toExternalForm());
         stage.show();
 	}
 	
@@ -104,6 +105,7 @@ public class OptController implements Initializable {
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/DeleteProfile.css").toExternalForm());
         stage.show();
 	}
 	
@@ -117,6 +119,7 @@ public class OptController implements Initializable {
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/Main.css").toExternalForm());
         stage.show();
 	}
 

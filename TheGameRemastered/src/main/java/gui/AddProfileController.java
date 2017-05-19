@@ -103,6 +103,7 @@ public class AddProfileController implements Initializable {
         stage.setHeight(Main.useHeight);
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/css/Opt.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
 	}

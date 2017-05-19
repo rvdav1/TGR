@@ -36,6 +36,7 @@ public class MainController implements Initializable{
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/PlayMode.css").toExternalForm());
         stage.show();
     }
     
@@ -50,6 +51,7 @@ public class MainController implements Initializable{
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/Opt.css").toExternalForm());
         stage.show();
     }
     

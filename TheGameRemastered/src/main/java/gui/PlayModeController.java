@@ -36,6 +36,7 @@ public class PlayModeController implements Initializable{
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/Play.css").toExternalForm());
         stage.show();
     }
     
@@ -52,6 +53,7 @@ public class PlayModeController implements Initializable{
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/Play.css").toExternalForm());
         stage.show();
     }
     
@@ -66,6 +68,7 @@ public class PlayModeController implements Initializable{
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/Main.css").toExternalForm());
         stage.show();
 	}
 

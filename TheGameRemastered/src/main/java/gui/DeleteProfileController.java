@@ -55,6 +55,7 @@ public class DeleteProfileController implements Initializable {
 			stage.setWidth(Main.useWidth);
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
+			scene.getStylesheets().add(getClass().getResource("/css/DeleteProfile.css").toExternalForm());
 			stage.show();
 		} else
 			labelDel.setText("Nothing to delete!");
@@ -74,6 +75,7 @@ public class DeleteProfileController implements Initializable {
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/DeleteProfile.css").toExternalForm());
         stage.show();
 	}
 	
@@ -88,6 +90,7 @@ public class DeleteProfileController implements Initializable {
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/Opt.css").toExternalForm());
         stage.show();
 	}
 

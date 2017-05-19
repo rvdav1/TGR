@@ -1,0 +1,7 @@
+.root {
+     -fx-background-image: url("Main.jpg");
+}
+
+.label {
+	-fx-background-color: black;
+}

@@ -33,6 +33,7 @@ public class EndController implements Initializable{
         stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+		scene.getStylesheets().add(getClass().getResource("/css/Main.css").toExternalForm());
         stage.show();
     }
     

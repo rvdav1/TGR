@@ -47,9 +47,10 @@ public class Main extends Application {
 	        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
 	        
 	        Scene scene = new Scene(root);
-	        
+	        	        
 	        stage.setTitle("The GaMe!");
 	        stage.setScene(scene);
+	        scene.getStylesheets().add(getClass().getResource("/css/Main.css").toExternalForm());
 	        stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
