@@ -19,6 +19,8 @@ public class Main extends Application {
 	public static boolean isCPU;
 	public static boolean winner;
 	public static String location;
+	public static int useWidth = 640;
+	public static int useHeight = 480;
 	
 	public static String getName(){
 		return new java.io.File(Main.class.getProtectionDomain()
@@ -32,6 +34,10 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage stage) {
+		stage.setMinHeight(useHeight);
+		stage.setMinWidth(useWidth);
+		stage.setMaxHeight(useHeight);
+		stage.setMaxWidth(useWidth);
 		firstTeam = ReadInXML.readXML(getClass().getResourceAsStream("/profiles/.xml"));
 		secondTeam = ReadInXML.readXML(getClass().getResourceAsStream("/profiles/.xml"));
 		location = getClass().getProtectionDomain().getCodeSource().getLocation().toString();

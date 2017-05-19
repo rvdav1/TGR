@@ -19,7 +19,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import persistence.WriteInXML;
 
 public class AddProfileController implements Initializable {
@@ -100,10 +99,9 @@ public class AddProfileController implements Initializable {
         Parent root;
 
         root=FXMLLoader.load(getClass().getResource("/fxml/Opt.fxml"));
-        Window mainScene= backAdd.getScene().getWindow();
         stage=(Stage) backAdd.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

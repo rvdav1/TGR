@@ -12,7 +12,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 public class PlayModeController implements Initializable{
 	@FXML
@@ -33,8 +32,8 @@ public class PlayModeController implements Initializable{
         
         root=FXMLLoader.load(getClass().getResource("/fxml/Play.fxml"));
         stage=(Stage) CPUPlayModeButton.getScene().getWindow();
-        stage.setHeight(800);
-        stage.setWidth(800);
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -49,8 +48,8 @@ public class PlayModeController implements Initializable{
         
         root=FXMLLoader.load(getClass().getResource("/fxml/Play.fxml"));
         stage=(Stage) CPUPlayModeButton.getScene().getWindow();
-        stage.setHeight(800);
-        stage.setWidth(800);
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -61,11 +60,10 @@ public class PlayModeController implements Initializable{
         Stage stage;
         Parent root;
         
-        Window mainScene= backPlayModeButton.getScene().getWindow();
         root=FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
         stage=(Stage) backPlayModeButton.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

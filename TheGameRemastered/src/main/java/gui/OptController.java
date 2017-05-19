@@ -20,7 +20,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 import persistence.*;
 
@@ -86,10 +85,9 @@ public class OptController implements Initializable {
         Parent root;
         
         root=FXMLLoader.load(getClass().getResource("/fxml/AddProfile.fxml"));
-        Window mainScene= newOptProfile.getScene().getWindow();
         stage=(Stage) newOptProfile.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -101,10 +99,9 @@ public class OptController implements Initializable {
         Parent root;
         
         root=FXMLLoader.load(getClass().getResource("/fxml/DeleteProfile.fxml"));
-        Window mainScene= deleteOptProfile.getScene().getWindow();
         stage=(Stage) deleteOptProfile.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -114,11 +111,10 @@ public class OptController implements Initializable {
 	void handleOptBack(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
-        Window mainScene= backOpt.getScene().getWindow();
         root=FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
         stage=(Stage) backOpt.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

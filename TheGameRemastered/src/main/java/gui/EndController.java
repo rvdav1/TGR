@@ -14,7 +14,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 public class EndController implements Initializable{
 	@FXML
@@ -29,10 +28,9 @@ public class EndController implements Initializable{
         Parent root;
         
         root=FXMLLoader.load(getClass().getResource("/fxml/Main.fxml"));
-        Window mainScene= backEndButton.getScene().getWindow();
         stage=(Stage) backEndButton.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

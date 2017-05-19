@@ -20,7 +20,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import persistence.WriteInXML;
 
 public class DeleteProfileController implements Initializable {
@@ -51,10 +50,9 @@ public class DeleteProfileController implements Initializable {
 			Parent root;
         
 			root=FXMLLoader.load(getClass().getResource("/fxml/DeleteProfile.fxml"));
-			Window mainScene= deleteProfileButton.getScene().getWindow();
 			stage=(Stage) deleteProfileButton.getScene().getWindow();
-			stage.setHeight(mainScene.getHeight());
-			stage.setWidth(mainScene.getWidth());
+			stage.setHeight(Main.useHeight);
+			stage.setWidth(Main.useWidth);
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
@@ -71,10 +69,9 @@ public class DeleteProfileController implements Initializable {
         Parent root;
         
         root=FXMLLoader.load(getClass().getResource("/fxml/DeleteProfile.fxml"));
-        Window mainScene= deleteAllButton.getScene().getWindow();
         stage=(Stage) deleteAllButton.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -86,10 +83,9 @@ public class DeleteProfileController implements Initializable {
         Parent root;
 
         root=FXMLLoader.load(getClass().getResource("/fxml/Opt.fxml"));
-        Window mainScene= backDel.getScene().getWindow();
         stage=(Stage) backDel.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

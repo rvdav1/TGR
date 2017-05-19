@@ -158,6 +158,7 @@ public class PlayController  implements Initializable{
 			colNumFirst = 0;
 		else
 			colNumFirst = GridPane.getColumnIndex(clickedButton.getParent());
+		
 		if(!game.isEnded())
 			game.letsPlay(rowNumLast, colNumLast, rowNumFirst, colNumFirst);
 		
@@ -185,7 +186,6 @@ public class PlayController  implements Initializable{
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
-
 		game = new FXGameEngine();
 		game.initGame(Main.firstTeam, Main.secondTeam);
 		game.drawBoard(gridPane);

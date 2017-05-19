@@ -13,7 +13,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 public class MainController implements Initializable{
 	
@@ -32,10 +31,9 @@ public class MainController implements Initializable{
         Parent root;
         
         root=FXMLLoader.load(getClass().getResource("/fxml/PlayMode.fxml"));
-        Window mainScene= mainOptionsButton.getScene().getWindow();
         stage=(Stage) mainOptionsButton.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -47,10 +45,9 @@ public class MainController implements Initializable{
         Parent root;
         
         root=FXMLLoader.load(getClass().getResource("/fxml/Opt.fxml"));
-        Window mainScene= mainOptionsButton.getScene().getWindow();
         stage=(Stage) mainOptionsButton.getScene().getWindow();
-        stage.setHeight(mainScene.getHeight());
-        stage.setWidth(mainScene.getWidth());
+        stage.setHeight(Main.useHeight);
+        stage.setWidth(Main.useWidth);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
