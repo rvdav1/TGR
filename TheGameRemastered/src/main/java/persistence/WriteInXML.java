@@ -1,11 +1,13 @@
 package persistence;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
 import java.nio.file.FileSystems;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.net.URLDecoder;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -71,6 +73,11 @@ public class WriteInXML {
 		if (folder.startsWith(unixSep))
 			while(folder.contains(unixSep + unixSep))
 				folder = folder.replaceAll(unixSep + unixSep, separator );
+		try {
+			folder = URLDecoder.decode( folder, "UTF-8" );
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		return folder;
 	}
 	
@@ -130,13 +137,10 @@ public class WriteInXML {
 			trans.transform(source, result);
 
 		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
